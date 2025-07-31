@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Toxic Comment Detection API</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #e0eafc, #cfdef3);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #ffffffcc;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #3a3a3a;
+    }
+
+    .logo span {
+      color: #007bff;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #444;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #007bff;
+    }
+
+    .hero {
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .buttons a {
+      padding: 12px 24px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,123,255,0.3);
+      transition: background 0.3s ease;
+    }
+
+    .buttons a:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      color: #555;
+      background-color: #f9f9f9;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 10px;
+      }
+      .buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">TCD<span>aaS</span></div>
+    <nav>
+        <a href="dataVis.html">Data Visualization</a>
+      <a href="register.html">Get Your API</a>
+      <a href="predict.html">Test Your API</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to Toxic Comment Detection API as a Service</h1>
+    <p>
+      Easily detect toxic or harmful comments in your applications with our intelligent API. Whether you're building a moderation system or filtering content, TCDaaS provides a fast, secure, and reliable toxicity analysis service for developers.
+    </p>
+    <div class="buttons">
+        <a href="dataVis.html">Data Visualization</a>
+      <a href="register.html">Get Your API</a>
+      <a href="predict.html">Test Your API</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 TCDaaS. All rights reserved.
+  </footer>
+
+</body>
+</html>

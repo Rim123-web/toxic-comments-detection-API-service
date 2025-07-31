@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register User</title>
+  <style>
+  body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f2f4f8, #d9e2ec);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* full viewport height */
+  margin: 0;
+  padding: 20px; /* add some padding around to avoid edge clipping */
+}
+
+.register-container {
+  background-color: white;
+  padding: 40px 50px; /* more padding for nice spacing */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%; /* responsive */
+  box-sizing: border-box;
+  margin: 40px 0; /* top and bottom margin */
+}
+
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    label {
+      font-weight: 500;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-sizing: border-box;
+      transition: border-color 0.3s;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #007BFF;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #007BFF;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .checkbox-label input {
+      margin-right: 10px;
+    }
+
+    .message {
+      margin-top: 15px;
+      text-align: center;
+      font-weight: bold;
+      color: #28a745;
+      white-space: pre-wrap;
+    }
+
+    .error {
+      color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+  <div class="register-container">
+    <h2>Get ur API Key</h2>
+    <form id="registerForm">
+      <label>Username:</label>
+      <input type="text" id="username" placeholder="William Smith" required>
+
+      <label>Email:</label>
+      <input type="email" id="email" placeholder="email@gmail.com" required>
+
+      <label>Role:</label>
+      <select id="role" required>
+        <option value="" disabled selected>Select your role</option>
+        <option value="Developer">Developer</option>
+        <option value="Student">Student</option>
+        <option value="Researcher">Researcher</option>
+        <option value="Hobbyist">Hobbyist</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label>Organization:</label>
+      <input type="text" id="organization" placeholder="Your organization or company" required>
+
+      <label>Project Purpose:</label>
+      <input type="text" id="project_purpose" placeholder="Briefly describe your project purpose" required>
+
+      <label>Country:</label>
+      <input type="text" id="country" placeholder="Country of residence" required>
+
+      <label class="checkbox-label">
+        <input type="checkbox" id="agreed_terms" required>
+        I agree to the terms and conditions
+      </label>
+      <p>PS: copy ur api key it s given only once !</p>
+
+      <button type="submit">Submit</button><br>
+      <a href="home.html">home?</a>
+     
+    </form>
+
+    <div id="result" class="message"></div>
+  </div>
+
+  <script>
+    document.getElementById('registerForm').addEventListener('submit', async function(event) {
+      event.preventDefault();
+
+      const response = await fetch('http://127.0.0.1:5000/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          username: document.getElementById('username').value.trim(),
+          email: document.getElementById('email').value.trim(),
+          role: document.getElementById('role').value,
+          organization: document.getElementById('organization').value.trim(),
+          project_purpose: document.getElementById('project_purpose').value.trim(),
+          country: document.getElementById('country').value.trim(),
+          agreed_terms: document.getElementById('agreed_terms').checked
+        })
+      });
+
+      const result = await response.json();
+      const resultDiv = document.getElementById('result');
+
+   if (response.ok) {
+  alert(`✅ ${result.message}\nYour API key: ${result.api_key}`);
+  resultDiv.textContent = '✅ ' + result.message + '\nPlease save your API key securely.';
+  resultDiv.classList.remove('error');
+} else {
+  resultDiv.textContent = '❌ ' + result.error;
+  resultDiv.classList.add('error');
+}
+
+    });
+  </script>
+</body>
+</html>

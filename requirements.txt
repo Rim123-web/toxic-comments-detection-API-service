@@ -1,0 +1,10 @@
+flask
+flask_sqlalchemy
+flask_cors
+flask_admin
+numpy
+joblib
+xgboost
+scikit-learn
+imblearn
+werkzeug
