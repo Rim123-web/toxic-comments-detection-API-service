@@ -3,8 +3,6 @@ This project provides a Toxic Comment Detection API powered by Flask, where user
 
 
 
-#  Toxic Comment Detection API
-
 This project is a complete **Toxic Comment Detection API as a Service**, built using **Flask** for the backend and **HTML/CSS/JavaScript** for the frontend. It allows users to generate an API key via a simple form, test their key, and use it to get predictions about whether a given comment is **toxic (1)** or **non-toxic (0)**.
 
 ## 🚀 Project Overview
