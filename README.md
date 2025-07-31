@@ -5,16 +5,16 @@ This project provides a Toxic Comment Detection API powered by Flask, where user
 
 This project is a complete **Toxic Comment Detection API as a Service**, built using **Flask** for the backend and **HTML/CSS/JavaScript** for the frontend. It allows users to generate an API key via a simple form, test their key, and use it to get predictions about whether a given comment is **toxic (1)** or **non-toxic (0)**.
 
-## 🚀 Project Overview
+##  Project Overview
 
-* 🔍 **Main Objective**: Detect if a user-submitted comment is **toxic** or **non-toxic**.
-* 🔐 **API Key System**: Users fill out a form to receive an API key and then test it directly from the interface.
-* 📊 **Visualization Dashboard**: Integrated data visualizations (heatmaps, bar plots, radar charts) for insight into the dataset and prediction behavior.
-* 🧠 **ML Model**: XGBoost classifier trained on preprocessed text data, achieving **\~94% accuracy**.
+*  **Main Objective**: Detect if a user-submitted comment is **toxic** or **non-toxic**.
+*  **API Key System**: Users fill out a form to receive an API key and then test it directly from the interface.
+*  **Visualization Dashboard**: Integrated data visualizations (heatmaps, bar plots, radar charts) for insight into the dataset and prediction behavior.
+*  **ML Model**: XGBoost classifier trained on preprocessed text data, achieving **\~94% accuracy**.
 
 ---
 
-## ⚙️ Features
+##  Features
 
 * **User Form** to get a unique API key (no registration required).
 * **API Endpoint** to predict toxicity of comments.
@@ -27,7 +27,7 @@ This project is a complete **Toxic Comment Detection API as a Service**, built u
 
 ---
 
-## 🧠 Machine Learning Pipeline
+##  Machine Learning Pipeline
 
 1. **Data Cleaning**:
 
@@ -59,7 +59,7 @@ This project is a complete **Toxic Comment Detection API as a Service**, built u
 
 
 
-## 🔑 How it works
+##  How it works
 
 
 
@@ -79,13 +79,13 @@ This project is a complete **Toxic Comment Detection API as a Service**, built u
 
 ---
 
-## 📊 Dashboard
+##  Dashboard
 
 Visualizations are embedded directly in the dashboard:
 
-* 📉 Correlation heatmap
-* 📊 Threshold frequency bar chart
-* 🕸️ Radar chart of toxicity distribution
+*  Correlation heatmap
+*  Threshold frequency bar chart
+*  Radar chart of toxicity distribution
 
 ---
 
@@ -100,7 +100,7 @@ python app.py
 
 ---
 
-## 📌 Notes
+##  Notes
 
 * No registration or login is required.
 * The prediction model is optimized for performance and speed.
