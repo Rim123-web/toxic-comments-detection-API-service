@@ -1,7 +1,7 @@
 # toxic-comments-detection-API-service
 This project provides a Toxic Comment Detection API powered by Flask, where users can fill out a simple form to instantly receive their API key and use it to analyze text comments for toxicity.
 
-
+This project aims to build a model capable of identifying toxic comments. Here, toxic refers specifically to language that is insulting, obscene, or abusive—including words or phrases. These terms contribute to a hostile or harmful online environment. It is important to note that not all negative or critical comments are considered toxic. For example, a comment like "This content is bad" expresses criticism but lacks abusive intent and is therefore not labeled as toxic. The goal is to differentiate between constructive feedback and harmful speech to better support moderation efforts and promote healthy online interactions.
 
 This project is a complete **Toxic Comment Detection API as a Service**, built using **Flask** for the backend and **HTML/CSS/JavaScript** for the frontend. It allows users to generate an API key via a simple form, test their key, and use it to get predictions about whether a given comment is **toxic (1)** or **non-toxic (0)**.
 
@@ -92,7 +92,7 @@ Visualizations are embedded directly in the dashboard:
 ##  Installation
 
 ```bash
-git clone https://github.com/yourusername/toxic-comment-api.git
+git clone https://github.com/Rim123-web/toxic-comments-detection-API-service.git
 cd toxic-comment-api
 pip install -r requirements.txt
 python app.py
